@@ -16,5 +16,8 @@ class loginpage:
     def Password(self):
         return self.driver.find_element(*self.loc_password)
 
-    def Login(self):
+    def ClickLogin(self):
         return self.driver.find_element(*self.loc_login)
+
+    def LoginPage(self):
+        pass

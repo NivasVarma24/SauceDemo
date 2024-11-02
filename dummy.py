@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 serobj = Service("C:\\Users\saini\Downloads\chromedriver-win64 (1)\chromedriver-win64\chromedriver.exe")
 driver = webdriver.Chrome(service=serobj)
 driver.implicitly_wait(5)
-driver.get("https://www.saucedemo.com/v1/inventory.html")
+driver.get("https://www.saucedemo.com/v1/checkout-complete.html")
 # username = driver.find_element(By.ID,"user-name")
 # if username.is_enabled():
 #     print("enabled")
@@ -23,12 +23,10 @@ driver.get("https://www.saucedemo.com/v1/inventory.html")
 #
 # name = driver.find_element(By.XPATH,"//div [@class='product_label']")
 #
-prod_name = driver.find_elements(By.XPATH,"//div [@class='inventory_item']/div[2]/a/div")
+prod_name = driver.find_element(By.CSS_SELECTOR,"h2[class='complete-header']")
 
-for i in prod_name:
-    print(i.text)
-# print(prod_name.text)
-
+print(prod_name.text)
+assert "THANK YOU" in prod_name.text
 # print(name)
 
 time.sleep(5)

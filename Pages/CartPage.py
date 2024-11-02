@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
 
+from Pages.CheckOutPage import checkoutpage
+
 
 class cartpage:
 
@@ -13,4 +15,6 @@ class cartpage:
         return self.driver.find_element(*self.loc_cartItem)
 
     def clickCheckout(self):
-        return self.driver.find_element(*self.loc_checkoutbtn).click()
+        self.driver.find_element(*self.loc_checkoutbtn).click()
+        checkoutpgobj = checkoutpage(self.driver)
+        return  checkoutpgobj
