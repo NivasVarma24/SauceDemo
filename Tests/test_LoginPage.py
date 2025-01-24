@@ -94,6 +94,7 @@ class TestLoginPage(Baseclass):
         confirmMsg = finsihobj.succesmsg()
         print(confirmMsg)
         print(confirmMsg)
+        print("hello")
         assert "THANK YOU" in confirmMsg
 
 
