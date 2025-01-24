@@ -93,6 +93,7 @@ class TestLoginPage(Baseclass):
         finsihobj = overviewpgobj.clickFinish()
         confirmMsg = finsihobj.succesmsg()
         print(confirmMsg)
+        print(confirmMsg)
         assert "THANK YOU" in confirmMsg
 
 
